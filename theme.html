@@ -110,10 +110,7 @@
                     {% for post in items %}
                     <li>
                         <article itemscope itemtype="http://schema.org/Article">
-                            <time datetime="{{ post.created_at }}">{{ post.created_at.strftime('%d %B') }}</time> &rsaquo; <a href="{{ post.permalink }}" class="permalink">{{ post.title }}</a>
-                            <div class="post-tags hidden-phone">
-                                {{- post.tags|format_tags(humanize=True) -}}
-                            </div>
+                            <a href="{{ post.permalink }}" class="permalink">{{ post.title }}</a>
                         </article>
                     </li>
                     {% endfor %}
@@ -121,8 +118,8 @@
                 {% endfor %}
                 {% if not is_tag %}
                 <div class="pagination">
-                    {% if pagination.prev %}<a href="{{ pagination.prev }}" class="post-prev">&larr; View Previous Posts</a>{% endif %}
-                    {% if pagination.next %}<a href="{{ pagination.next }}" class="post-next">View More Posts &rarr;</a>{% endif %}
+                    {% if pagination.prev %}<a href="{{ pagination.prev }}" class="post-prev">&larr; Articles précédents</a>{% endif %}
+                    {% if pagination.next %}<a href="{{ pagination.next }}" class="post-next">Articles suivants &rarr;</a>{% endif %}
                 </div>
                 {% endif %}
                 {% else %}
