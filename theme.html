@@ -101,11 +101,7 @@
 
                 {% if posts %}
                 {% for year, items in sort_by_year(posts) %}
-                {% if not is_tag %}
-                <header>
-                    <h2 class="title">{{ year }}</h2>
-                </header>
-                {% endif %}
+
                 <ul class="posts">
                     {% for post in items %}
                     <li>
