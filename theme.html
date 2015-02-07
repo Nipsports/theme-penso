@@ -50,7 +50,44 @@
             <div class="header-nav">
                 <nav role="navigation">
                     <ul class="nav nav-pills nav-home hidden-phone">
-                        <li><a href="/"><i class="icon-home"></i> Home</a></li>
+                        {% if site.twitter %}
+                    <li>
+                        <a href="{{ site.twitter }}" title="Twitter" target="_blank">
+                            <i class="icon-twitter"></i>
+                            <span class="hide-text">Twitter</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.facebook %}
+                    <li>
+                        <a href="{{ site.facebook }}" title="Facebook" target="_blank">
+                            <i class="icon-facebook"></i>
+                            <span class="hide-text">Facebook</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.googleplus %}
+                    <li>
+                        <a href="{{ site.googleplus }}?rel=author" title="Google+" target="_blank">
+                            <i class="icon-google-plus"></i>
+                            <span class="hide-text">Google Plus</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.linkedin %}
+                    <li>
+                        <a href="{{ site.linkedin }}" title="LinkedIn" target="_blank">
+                            <i class="icon-linkedin"></i>
+                            <span class="hide-text">LinkedIn</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    <li>
+                        <a href="{{ site.atom_url }}" title="RSS" target="_blank">
+                            <i class="icon-rss"></i>
+                            <span class="hide-text">RSS</span>
+                        </a>
+                    </li>
                     </ul>
                     <ul class="nav nav-pills nav-pages pull-right">
                         {% if pages %}
