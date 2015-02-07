@@ -110,7 +110,7 @@
                     {% for post in items %}
                     <li>
                         <article itemscope itemtype="http://schema.org/Article">
-                            <a href="{{ post.permalink }}" class="permalink">{{ post.title }}</a> - {{ post.excerpt }}
+                            <a href="{{ post.permalink }}" class="permalink">{{ post.title }}</a> - <time datetime="{{ post.created_at }}">{{ post.created_at.strftime('%d %B %G') }}</time>
                         </article>
                     </li>
                     {% endfor %}
